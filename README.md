@@ -1,80 +1,77 @@
 -----
 
-# 🚀 Sentiment Analysis Multi-Model Benchmark
+# 🎵 YouTube Music Video Sentiment Analyzer
 
-A Fullstack Web Application built with **Flask** and **TensorFlow/Keras** to analyze sentiments (Positive, Neutral, Negative) in Vietnamese text. This project serves as a benchmark tool to compare the real-time performance of 13 different Deep Learning architectures.
+A specialized Fullstack Web Application built with **Flask** and **Deep Learning** to analyze viewer sentiments (Positive, Neutral, Negative) from YouTube music video comments. This tool is designed to help creators and marketers understand audience reactions, from "fan-girling" to "constructive criticism" or even "sarcastic trolls."
 
-## ✨ Key Features
+## ✨ Industry-Specific Features
 
-  * **Multi-Model Support**: Compare 13 architectures including CNN, LSTM, BiLSTM, GRU, BiGRU, TextCNN, TextRCNN, Transformer, and Attention-based models.
-  * **Real-time Benchmarking**: Automatically measures Inference Time (ms) and Confidence Score (%) for every model upon request.
-  * **Performance Highlighting**: Automatically identifies and highlights the fastest model in the comparison table.
-  * **Vietnamese NLP Pipeline**: Utilizes the `pyvi` library for accurate Vietnamese word segmentation (Tokenization) and preprocessing.
-  * **Modern Responsive UI**: Built with Bootstrap 5, featuring smooth loading animations and intuitive result visualization.
+  * **13 AI Architectures:** Compare performance across 13 models (CNN, BiLSTM, Transformer, etc.) to see which one best understands complex fan language.
+  * **Slang & Sarcasm Ready:** Optimized to detect common Vietnamese music-related slang (e.g., *đỉnh chóp, keo lỳ, gánh còng lưng*).
+  * **Real-time Benchmarking:** Measures Inference Time (ms) to show which model is fast enough for large-scale YouTube data scraping.
+  * **Context-Aware Analysis:** Specifically tuned for the "Music & Entertainment" domain where emotional expressions are often metaphorical or hyperbolic.
 
 ## 📂 Project Structure
 
-Before running the application, ensure you have downloaded the trained models and the tokenizer file into the following directory structure:
+Ensure you have downloaded the trained models and the tokenizer file into the following directory structure:
 
 ```text
 sentiment_app/
-├── models/                     # Directory for trained .keras files
+├── models/                     # Trained .keras files for music sentiment
 │   ├── model_TextCNN.keras
-│   ├── model_BiLSTM.keras
-│   └── ... (Other model files)
+│   ├── model_BiLSTM_Attention.keras
+│   └── ... 
 │   # 📥 Download Models: https://drive.google.com/drive/folders/18b4mdw_wsCtYm0qQ_wp2uosTJ8e4tON5
 │
-├── static/                     # Static assets (CSS, JS)
-│   ├── style.css               # Custom UI styling
-│   └── script.js               # API calls & Frontend logic
+├── static/                     # Static assets (Custom UI)
+│   ├── style.css               
+│   └── script.js               
 │
-├── templates/                  # HTML templates
-│   └── index.html              # Main dashboard
+├── templates/                  # HTML Templates
+│   └── index.html              
 │
-├── app.py                      # Flask Backend Server
-├── requirements.txt            # Python dependencies
-└── tokenizer.pkl               # Word-to-index mapping dictionary
+├── app.py                      # Flask Backend (Sentiment API)
+├── requirements.txt            # Dependencies (TensorFlow, Pyvi, Flask)
+└── tokenizer.pkl               # Word-index mapping for music vocabulary
     # 📥 Download Tokenizer: https://drive.google.com/file/d/1TPdQlz56O9NMx5yaJfY0SwmU30SuWVgI
 ```
 
 ## 🛠️ Installation & Setup
 
-1.  **Initialize Virtual Environment (Recommended)**:
+1.  **Environment Setup**:
 
     ```bash
     python -m venv venv
-    # Windows:
+    # Activate (Windows):
     venv\Scripts\activate
-    # MacOS/Linux:
-    source venv/bin/activate
     ```
 
-2.  **Install Dependencies**:
+2.  **Install Requirements**:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Run the Application**:
+3.  **Launch the Dashboard**:
 
     ```bash
     python app.py
     ```
 
-4.  **Access the Web UI**: Open your browser and navigate to `http://127.0.0.1:5000`.
+4.  **Explore**: Navigate to `http://127.0.0.1:5000` and try pasting a "spicy" comment from a trending MV\!
 
-## 📊 Label Mapping
+## 📊 Evaluation Metrics (YouTube Context)
 
-The models predict numerical indices which are mapped to human-readable sentiments:
-
-  * **0**: Negative 😡
-  * **1**: Neutral 😐
-  * **2**: Positive 😍
+| Label | Emoji | Interpretation |
+| :--- | :--- | :--- |
+| **0 (Negative)** | 😡 | Hate speech, disappointment, or technical complaints. |
+| **1 (Neutral)** | 😐 | View counts updates, general questions, or simple mentions. |
+| **2 (Positive)** | 😍 | Praising visual/vocal, fan support, or emotional connection. |
 
 -----
 
-**Author:** [hanhdu](https://www.google.com/search?q=https://github.com/hanhdu)
-
+**Author:** [hanhdu](https://www.google.com/search?q=https://github.com/hanhdu)  
+**Project:** Sentiment Analysis for Music Industry  
 **License:** MIT
 
 -----
