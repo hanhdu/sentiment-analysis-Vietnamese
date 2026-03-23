@@ -70,7 +70,6 @@ sentiment_app/
 
 -----
 
-**Author:** [hanhdu](https://www.google.com/search?q=https://github.com/hanhdu)  
 **Project:** Sentiment Analysis for Music Industry  
 **License:** MIT
 
