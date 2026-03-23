@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-textarea {
+    resize: none;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.custom-textarea:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.fastest-row {
+    background-color: #f0fdf4 !important; /* Xanh nhạt highlight */
+    border-left: 4px solid #198754;
+}
+
+/* Tùy chỉnh badges cảm xúc */
+.badge-tieucuc { background-color: #dc3545; color: white; }
+.badge-trungtinh { background-color: #6c757d; color: white; }
+.badge-tichcuc { background-color: #198754; color: white; }
+
+.table th {
+    font-weight: 600;
+    color: #495057;
+}

@@ -1,0 +1,16 @@
+# Bỏ qua môi trường ảo
+venv/
+env/
+
+# Bỏ qua các file cache của Python
+__pycache__/
+*.pyc
+
+# Bỏ qua thư mục chứa model và dữ liệu nặng (Khuyên dùng)
+models/
+tokenizer.pkl
+dataset/
+
+# Bỏ qua các file cấu hình hệ điều hành
+.DS_Store
+Thumbs.db
