@@ -2,6 +2,25 @@
 
 Đây là ứng dụng Web Fullstack (Flask + Keras + Vanilla JS) giúp đánh giá và so sánh hiệu năng của nhiều mô hình Deep Learning khác nhau trong bài toán Phân tích cảm xúc văn bản Tiếng Việt.
 
+Chuẩn bị cấu trúc thư mục
+Trước khi chạy, hãy đảm bảo bạn đã tải các file mô hình (.keras) và từ điển (tokenizer.pkl) từ Google Colab về máy tính và đặt đúng vị trí như sơ đồ dưới đây:
+sentiment_app/
+│
+├── models/                  <-- LINK: https://drive.google.com/drive/folders/18b4mdw_wsCtYm0qQ_wp2uosTJ8e4tON5?usp=drive_link
+│   ├── model_TextCNN.keras
+│   ├── model_BiLSTM.keras
+│   └── ...
+│
+├── tokenizer.pkl            <-- LINK: https://drive.google.com/file/d/1TPdQlz56O9NMx5yaJfY0SwmU30SuWVgI/view?usp=sharing
+├── app.py                   
+├── requirements.txt         
+│
+├── templates/
+│   └── index.html           
+│
+└── static/
+    ├── style.css            
+    └── script.js
 ## ⚙️ 1. Cài đặt môi trường (Khuyên dùng)
 
 Để tránh xung đột thư viện với các dự án khác trên máy của bạn, hãy tạo một môi trường ảo (Virtual Environment).
